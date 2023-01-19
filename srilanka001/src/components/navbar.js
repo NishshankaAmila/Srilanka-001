@@ -2,9 +2,15 @@ import React from 'react'
 
 function navbar() {
   return (
-    <div>
-      
-    </div>
+    <>
+      <nav className="navbar">
+        <div className="navbar-container">
+          <link to="/" className="navbar-logo">
+            
+          </link>
+        </div>
+      </nav>
+    </>
   )
 }
 
