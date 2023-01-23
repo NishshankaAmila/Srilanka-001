@@ -1,17 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 
-function navbar() {
+function Navbar() {
+
+  const [click, setClick]= useState(false);
+  const handelClick =() => setClick(!click);
   return (
+  
     <>
       <nav className="navbar">
         <div className="navbar-container">
-          <link to="/" className="navbar-logo">
-            
-          </link>
+          <Link to="/" className="navbar-logo">
+            TRVL <i class="fa-sharp fa-solid fa-location-dot"></i>
+          </Link>
+          <diV className="menu-icon" onClick={handelClick}>
+            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+          </diV>
         </div>
-      </nav>
+      </nav> 
     </>
-  )
+  );
 }
 
-export default navbar
+export default Navbar
